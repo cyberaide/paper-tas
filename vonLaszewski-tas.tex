@@ -1,4 +1,8 @@
 \documentclass{sig-alternate}
+
+\newcommand{\TITLE}{Sicientific Impact Metrics for XSEDE}
+\newcommand{\AUTHOR}{Fugang Wang, Gregor von Laszewski}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % LATEX DEFINITIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -17,6 +21,30 @@
 \newcommand{\FILE}[1]{\todo[color=green!40]{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HYPERSETUP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={\TITLE},    % title
+    pdfauthor={\AUTHOR},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Gregor von Laszewski, Fugang Wang},   % creator of the document
+    pdfproducer={Gregor von Laszewski}, % producer of the document
+    pdfkeywords={hindex} {metric}{XSEDE} {FutureGrid}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=false,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 %
@@ -26,7 +54,7 @@
 \crdata{X-XXXXX-XX-X/XX/XX}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
 
-\title{Sicientific Impact Metrics for XSEDE}
+\title{\TITLE}
 %\subtitle{[Extended Abstract]
 %\titlenote{A full version of this paper is available as
 %\texttt{www.acm.org/eaddress.htm}}}
@@ -34,17 +62,17 @@
 \numberofauthors{4} 
 \author{
 \alignauthor
+Fugang Wang\\
+       \affaddr{Indiana University}\\
+       \affaddr{2719 10th Street}\\
+       \affaddr{Bloomington, Indiana, U.S.A.}\\
+ % 2nd. author
+\alignauthor
 Gregor von Laszewski\titlenote{Corresponding Author.}\\
        \affaddr{Indiana University}\\
        \affaddr{2719 10th Street}\\
        \affaddr{Bloomington, Indiana, U.S.A.}\\
        \email{laszewski@gmail.com}
-% 2nd. author
-\alignauthor
-Fugang Wang\\
-       \affaddr{Indiana University}\\
-       \affaddr{2719 10th Street}\\
-       \affaddr{Bloomington, Indiana, U.S.A.}\\
 % 3rd. author
 \alignauthor
 Geoffrey C. Fox\\
@@ -83,6 +111,8 @@ TBD
 
 \input{introduction}
 
+\input{futuregrid}
+
 \input{requirements}
 
 \input{design}
@@ -119,7 +149,8 @@ under Grant No. 0910812. If you use FutureGrid and produce a paper or
 presentation, we ask you to include the reference
 \cite{las2010gce,las12fg-bookchapter}.
 
-\bibliographystyle{IEEEtranS}
+%\bibliographystyle{IEEEtranS}
+\bibliographystyle{abbrv}
 \bibliography{%
 bib/references,%
 bib/vonLaszewski-jabref,%
