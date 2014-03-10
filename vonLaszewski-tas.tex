@@ -1,6 +1,6 @@
 \documentclass{sig-alternate}
 
-\newcommand{\TITLE}{Sicientific Impact Metrics for XSEDE}
+\newcommand{\TITLE}{Towards a Scientific Impact Measuring Framework for Large Computing Facilities - a Case Study on XSEDE}
 \newcommand{\AUTHOR}{Fugang Wang, Gregor von Laszewski}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -83,7 +83,7 @@ Geoffrey C. Fox\\
 % 4th. author
 \alignauthor 
 Tom Furlani\\
-       \affaddr{CRC}\\
+       \affaddr{CCR}\\
        \affaddr{Street}\\
        \affaddr{Buffalo NY, 47401}
 }
@@ -93,7 +93,8 @@ Tom Furlani\\
 \maketitle
 \begin{abstract}
 
-TBD
+In this paper we presented a framework that does publication and citation data retrieval, scientific impact metrics generation on different aggregated levels, as well as correlation analysis of the impact metrics vs the resource allocation for a computing facility. We applied the framework to conduct scientific impact metrics evaluation of XSEDE, and did extensive statistical analysis on the impact metrics on project level and Field of Science (FOS) level correlating to the Service Units (SUs) allocated by XSEDE. This not only shows the impact of the XSEDE in general, but also details how the impact is reflected on project level and different FOS. Some of the work could be utilized by XSEDE resource allocation review to help achieve higher scientific impact of XSEDE and better return of investment in general.
+
 \end{abstract}
 
 % A category with the (minimum) three required fields
@@ -103,7 +104,7 @@ TBD
 
 \terms{Theory}
 
-\keywords{h-index, metric, FutureGrid, Technology audit, XSEDE}
+\keywords{Scientific impact, bibliometric, h-index, Technology audit, XSEDE}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTIONS
@@ -111,17 +112,17 @@ TBD
 
 \input{introduction}
 
-\input{futuregrid}
+\input{related}
+%\input{futuregrid}
 
-\input{requirements}
+%\input{requirements}
 
 \input{design}
 
 \input{implementation}
+\input{results}
 
-\input{related}
-
-\input{evaluation}
+%\input{evaluation}
 
 \input{conclusion}
 
@@ -131,31 +132,22 @@ TBD
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %ACKNOWLEDGMENTS are optional
-\section{Acknowledgments}
+%\section{Acknowledgments}
 
 \section*{Acknowledgement}
 
-TODO: TAS Grant ... 
+This work is part of the Technology Auditing Service (TAS) project sponsored by NSF under grant number OCI 1025159.
 
-Some of the text published in this chapter is available form the
-FutureGrid portal. The FutureGrid project is funded by the National
-Science Foundation (NSF) and is led by Indiana University with
-University of Chicago, University of Florida, San Diego Supercomputing
-Center, Texas Advanced Computing Center, University of Virginia,
-University of Tennessee, University of Southern California, Dresden,
-Purdue University, and Grid 5000 as partner sites. This material is
-based upon work supported in part by the National Science Foundation
-under Grant No. 0910812. If you use FutureGrid and produce a paper or
-presentation, we ask you to include the reference
-\cite{las2010gce,las12fg-bookchapter}.
+\clearpage
 
-%\bibliographystyle{IEEEtranS}
-\bibliographystyle{abbrv}
+\bibliographystyle{IEEEtranS}
+%\bibliographystyle{abbrv}
 \bibliography{%
-bib/references,%
-bib/vonLaszewski-jabref,%
-bib/image-refs,%
-bib/cyberaide-cloud,%
-bib/python}
+%bib/references,%
+%bib/vonLaszewski-jabref,%
+%bib/image-refs,%
+%bib/cyberaide-cloud,%
+%bib/python,%
+tas.bib}
 
 \end{document}
