@@ -1,4 +1,4 @@
-FILE=vonLaszewski-tas
+FILE=vonLaszewski-tas_trf
 
 all:
 	pdflatex ${FILE}
