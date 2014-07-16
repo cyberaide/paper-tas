@@ -1,12 +1,15 @@
 FILE=vonLaszewski-tas
 
+
+
 all:
 	pdflatex ${FILE}
 	bibtex ${FILE}
 	pdflatex ${FILE}
 	pdflatex ${FILE}
 
-
+google:
+	time google docs get --title "${FILE}.tex" ${FILE}.txt
 
 real-clean: clean
 	rm -rf *.pdf
